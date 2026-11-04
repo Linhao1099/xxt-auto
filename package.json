@@ -1,0 +1,24 @@
+{
+  "name": "xxt-auto",
+  "version": "3.3.0",
+  "description": "学习通全自动任务机：一页上的视频、长图、章节测验全清完，再跳到下一个有任务点的小节",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "node build/build-all.mjs && node build/build-all-guide.mjs",
+    "test": "node tests/decode.mjs && node tests/all.mjs",
+    "check": "node --check src/xxt-all.js",
+    "font-table": "node tools/build-font-table.mjs"
+  },
+  "keywords": [
+    "userscript",
+    "tampermonkey",
+    "chaoxing",
+    "xuexitong",
+    "automation"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  }
+}

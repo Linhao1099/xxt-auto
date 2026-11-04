@@ -1,0 +1,45 @@
+xxt-auto
+Copyright (c) 2025 xxt-auto contributors
+
+This product includes data derived from a third-party project:
+
+--------------------------------------------------------------------------
+Dainoar/SuperAutoStudy
+https://github.com/Dainoar/SuperAutoStudy
+Licensed under the Apache License, Version 2.0
+--------------------------------------------------------------------------
+
+What was derived:
+
+  dist/font-table.txt
+
+    A lookup table mapping glyph-shape MD5 fingerprints to Chinese characters.
+    It is derived from the upstream project's `src/main/resources/font_map_table.json`
+    (30884 entries), by:
+
+      1. selecting only the entries that the encryption font encountered in this
+         project actually uses (6725 entries);
+      2. re-encoding each entry from a JSON key/value pair into a fixed-width
+         record of 11 characters — 10 hex digits of the MD5 prefix followed by
+         one character — so the whole table can be inlined into a userscript
+         without any escaping;
+      3. concatenating the records into a single string.
+
+    No other file in this repository is derived from that project. All code in
+    src/, build/, tests/ and tools/ was written independently; the upstream
+    project is a Java/Spring Boot server, this project is a single-file browser
+    userscript.
+
+The full text of the Apache License, Version 2.0 is included in
+`licenses/Apache-2.0.txt`.
+
+Changes were made to the derived data as described above. The Apache License
+does not grant permission to use the trade names, trademarks, service marks,
+or product names of the Licensor.
+
+--------------------------------------------------------------------------
+
+Third-party development dependency (not redistributed):
+
+  jsdom — MIT License — https://github.com/jsdom/jsdom
+  Used only by the test suite; not bundled into any distributed artifact.
